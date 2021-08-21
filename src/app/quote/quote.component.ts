@@ -35,7 +35,54 @@ export class QuoteComponent implements OnInit {
     }
   }
 
+  addLike(index:number){
+    this.techQuotes[index].upVote += 1;
+  }
 
+  addDislike(index:number){
+    this.techQuotes[index].downVote += 1;
+  }
+  mostLike(index:number){
+    let mostLike = this.techQuotes[index].upVote;
+    let mostDislike = this.techQuotes[index].downVote;
+    if(mostLike > mostDislike){
+      return true;
+    }else{
+      return false;
+    }
+  }
+  mostPopularQuote(){
+
+    this.popular.splice(0,this.popular.length);
+  
+    let largest=this.techQuotes[0].upVote;
+    let number=null;
+    for (let i=0;i<this.techQuotes.length;i++){
+      number=this.techQuotes[i].upVote;
+  
+      largest=Math.max(largest,number)
+    }
+    
+    for (let i=0;i<this.techQuotes.length;i++){
+      
+      if(this.techQuotes[i].upVote===largest){
+        this.popular.push(this.techQuotes[i]);
+      }
+    }
+  
+  }
+  
+
+
+  mostDislike(index:number){
+    let mostLike = this.techQuotes[index].upVote;
+    let mostDislike = this.techQuotes[index].downVote;
+    if(mostLike < mostDislike){
+      return true;
+    }else{
+      return false;
+    } 
+  }
   
   showQuoteDetails(index: number){
     this.techQuotes[index].showQuoteDescription = !this.techQuotes[index].showQuoteDescription;
