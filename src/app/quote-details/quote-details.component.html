@@ -3,7 +3,8 @@
     <hr>
     <p><small class="text-muted"> Quote Author </small> {{quote.quoteAuthor}}</p>
     <p><small class="text-muted">Uploaded by </small> {{quote.userName}}</p>
-    <p><small class="text-muted">Posted </small> {{quote.dateAdded|dateElapsed}} days ago</p>
+    <p><small class="text-muted">Posted </small> {{quote.dateAdded|dateElapsed}} days ago </p>
+    <p><small class="text-muted cyan-text">Posted on: </small> {{quote.dateAdded|date:'short'}} </p>
     <p> <span class="green-text" >{{quote.upVote}} Upvotes   </span>  <br>   <span class="red-text">{{quote.downVote}} Downvotes</span></p>
     <hr>
 
