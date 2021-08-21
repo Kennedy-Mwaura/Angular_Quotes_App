@@ -2,7 +2,7 @@
     <mdb-navbar SideClass="navbar fixed-top navbar-expand-lg navbar-dark scrolling-navbar intro-fixed-nav" [containerInside]="false">
       <mdb-navbar-brand>
         <a class="logo navbar-brand" href="#">
-          <strong>Navbar</strong>
+          <strong>Zoo Quotes</strong>
         </a>
       </mdb-navbar-brand>
       <links>
@@ -24,11 +24,10 @@
 
     <!-- Main -->
     <div class="main-view intro-2"> 
-        <div class="card-deck">
+        <div class="card-deck ">
             <!-- Card -->
-            <mdb-card>
-              <div class="view overlay waves-light" mdbWavesEffect>
-                <!-- Card img -->
+            <mdb-card *ngFor="let quote of techQuotes;let i=index">
+              <div class="view overlay waves-light" mdbWavesEffect >
                 <mdb-card-img src="../assets/images/16.jpg" alt="Card image cap"></mdb-card-img>
                 <a>
                   <div class="mask rgba-white-slight"></div>
@@ -38,92 +37,17 @@
               <mdb-card-body>
                 <!--Title-->
                 <mdb-card-title>
-                  <h4>Card Title</h4>
+                  <h4 class="h1">{{quote.id}}</h4>
                 </mdb-card-title>
           
                 <!--Text-->
-                <mdb-card-text> Some quick example text to build on the card title and make up the bulk of the card's
-                  content.
+                <mdb-card-text> {{quote.quote}}
                 </mdb-card-text>
           
-                <a href="#" mdbBtn color="primary" gradient="aqua" class="white-text" mdbWavesEffect>Button</a>
+                <a href="#" mdbBtn color="primary" gradient="aqua" class="white-text" mdbWavesEffect (click)='showQuoteDetails(i)'>See More</a>
               </mdb-card-body>
             </mdb-card>
-          
             <!-- Card -->
-            <mdb-card>
-              <div class="view rgba-white-slight waves-light" mdbWavesEffect>
-                <!-- Card img -->
-                <mdb-card-img src="../assets/images/14.jpg" alt="Card image cap"></mdb-card-img>
-                <a>
-                  <div class="mask"></div>
-                </a>
-              </div>
-              <!--Card content-->
-              <mdb-card-body>
-                <!--Title-->
-                <mdb-card-title>
-                  <h4>Card Title</h4>
-                </mdb-card-title>
-          
-                <!--Text-->
-                <mdb-card-text> Some quick example text to build on the card title and make up the bulk of the card's
-                  content.
-                </mdb-card-text>
-          
-                <a href="#" mdbBtn color="primary" mdbWavesEffect>Button</a>
-              </mdb-card-body>
-            </mdb-card>
-          
-            <!-- Card -->
-            <mdb-card>
-              <div class="view rgba-white-slight waves-light" mdbWavesEffect>
-                <!-- Card img -->
-                <mdb-card-img src="../assets/images/15.jpg" alt="Card image cap"></mdb-card-img>
-                <a>
-                  <div class="mask"></div>
-                </a>
-              </div>
-              <!--Card content-->
-              <mdb-card-body>
-                <!--Title-->
-                <mdb-card-title>
-                  <h4>Card Title</h4>
-                </mdb-card-title>
-          
-                <!--Text-->
-                <mdb-card-text> Some quick example text to build on the card title and make up the bulk of the card's
-                  content.
-                </mdb-card-text>
-          
-                <a href="#" mdbBtn color="primary" mdbWavesEffect>Button</a>
-              </mdb-card-body>
-            </mdb-card>
-    
-            <!-- Card -->
-            <mdb-card>
-                <div class="view rgba-white-slight waves-light" mdbWavesEffect>
-                <!-- Card img -->
-                <mdb-card-img src="../assets/images/15.jpg" alt="Card image cap"></mdb-card-img>
-                <a>
-                    <div class="mask"></div>
-                </a>
-                </div>
-                <!--Card content-->
-                <mdb-card-body>
-                <!--Title-->
-                <mdb-card-title>
-                    <h4>Card Title</h4>
-                </mdb-card-title>
-            
-                <!--Text-->
-                <mdb-card-text> Some quick example text to build on the card title and make up the bulk of the card's
-                    content.
-                </mdb-card-text>
-            
-                <a href="#" mdbBtn color="primary" mdbWavesEffect>Button</a>
-                </mdb-card-body>
-            </mdb-card>
   
         </div>    
         <!-- /.Main -->

@@ -6,7 +6,7 @@ import { Quote } from '../quote';
   templateUrl: './quote.component.html',
   styleUrls: ['./quote.component.scss']
 })
-export class QuoteComponent implements OnInit {
+export class  QuoteComponent implements OnInit {
   techQuotes:Quote[] = [
     new Quote(1, 'Ken', 'I love technology', new Date(2021, 3, 14), 12,3, false),
     new Quote(2, 'Ken', 'I love technology', new Date(2021, 5, 14), 12,3, false),
