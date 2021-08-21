@@ -28,7 +28,13 @@
 
 .card-deck {
     padding-top: 5%;
+    padding-bottom: 5%;
     height: 50vh;
     padding-left: 3%;
     padding-right: 3%;
+}
+.view .card-text {
+    background-color: whitesmoke;
+    height: 20vh;
+    padding-bottom: 5%;
 }

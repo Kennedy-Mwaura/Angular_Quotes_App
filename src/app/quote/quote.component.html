@@ -45,6 +45,11 @@
                 </mdb-card-text>
           
                 <a href="#" mdbBtn color="primary" gradient="aqua" class="white-text" mdbWavesEffect (click)='showQuoteDetails(i)'>See More</a>
+                <div class="card-text"*ngIf="quote.showQuoteDescription">
+                  <p><i class="far fa-thumbs-up    " (click)='addLike(i)' (click)='mostPopularQuote()'></i>  <i style="text-indent: 2em;" (click)='addDislike(i)' class="far fa-thumbs-down    "></i></p>
+                  <app-quote-details [quote]='quote' (isDeleted)='deleteTechQuotes($event,i)'></app-quote-details>
+
+                </div>
               </mdb-card-body>
             </mdb-card>
             <!-- Card -->

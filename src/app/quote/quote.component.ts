@@ -8,25 +8,25 @@ import { Quote } from '../quote';
 })
 export class  QuoteComponent implements OnInit {
   techQuotes:Quote[] = [
-    new Quote(1, 'Ken', 'I love technology', new Date(2021, 3, 14), 12,3, false),
-    new Quote(2, 'Ken', 'I love technology', new Date(2021, 5, 14), 12,3, false),
-    new Quote(3, 'Ken', 'I love technology', new Date(2021, 6, 22), 12,3, false),
+    new Quote(1, 'Ken','Zoo', 'I love technology', new Date(2021, 3, 14), 12,3, false),
+    new Quote(2, 'Ken','Zoo', 'I love technology', new Date(2021, 5, 14), 12,3, false),
+    new Quote(3, 'Ken','Zoo', 'I love technology', new Date(2021, 6, 22), 12,3, false),
   ];
 
   popular:Quote[] = [
-    new Quote(1, 'Ken', 'I love technology', new Date(2021, 3, 14), 12,3, false),
-    new Quote(2, 'Ken', 'I love technology', new Date(2021, 5, 14), 12,3, false),
+    new Quote(1, 'Ken', 'Zoo','I love technology', new Date(2021, 3, 14), 12,3, false),
+    new Quote(2, 'Ken', 'Zoo','I love technology', new Date(2021, 5, 14), 12,3, false),
   ];
 
   addNewQuote(quote: any){
     let quoteLength = this.techQuotes.length;
-    let quoteObject = new Quote(quoteLength+1, quote.name, quote.quote, new Date(quote.date), quote.likes, quote.dislikes, false);
+    let quoteObject = new Quote(quoteLength+1, quote.name,quote.author, quote.quote, new Date(quote.date), quote.likes, quote.dislikes, false);
 
     // quote.id = quoteLength+1;
     this.techQuotes.push(quoteObject);
   }
   
-  deleteTechQuotes(index:number, isDeleted:boolean){
+  deleteTechQuotes(isDeleted:boolean,index:number){
     if(isDeleted){
       let toDelete = confirm(`Are you sure you want to delete ${this.techQuotes[index].quote}?`);
       if(toDelete){
