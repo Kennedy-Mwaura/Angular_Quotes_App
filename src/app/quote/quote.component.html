@@ -24,15 +24,10 @@
 
     <!-- Main -->
     <div class="main-view intro-2"> 
-        <div class="card-deck ">
+        <div class="card-main row d-flex justify-content-center">
             <!-- Card -->
-            <mdb-card *ngFor="let quote of techQuotes;let i=index">
-              <div class="view overlay waves-light" mdbWavesEffect >
-                <mdb-card-img src="../assets/images/16.jpg" alt="Card image cap"></mdb-card-img>
-                <a>
-                  <div class="mask rgba-white-slight"></div>
-                </a>
-              </div>
+            <mdb-card class="card col-sm-2" *ngFor="let quote of techQuotes;let i=index">
+              
               <!--Card content-->
               <mdb-card-body>
                 <!--Title-->
@@ -45,14 +40,20 @@
                 </mdb-card-text>
           
                 <a href="#" mdbBtn color="primary" gradient="aqua" class="white-text" mdbWavesEffect (click)='showQuoteDetails(i)'>See More</a>
-                <div class="card-text"*ngIf="quote.showQuoteDescription">
-                  <p><i class="far fa-thumbs-up    " (click)='addLike(i)' (click)='mostPopularQuote()'></i>  <i style="text-indent: 2em;" (click)='addDislike(i)' class="far fa-thumbs-down    "></i></p>
-                  <app-quote-details [quote]='quote' (isDeleted)='deleteTechQuotes($event,i)'></app-quote-details>
-
-                </div>
+        
               </mdb-card-body>
+              <div class="card-text"*ngIf="quote.showQuoteDescription">
+                <p><i class="far fa-thumbs-up" (click)='addLike(i)' (click)='mostPopularQuote()'></i>  <i style="text-indent: 2em;" (click)='addDislike(i)' class="far fa-thumbs-down    "></i></p>
+                <div class="container-fluid" id="buttons">
+                  <button class="btn btn-sm btn-success" (click)='addLike(i)' (click)='mostPopularQuote()'>{{quote.upVote}} <i class="fa fa-thumbs-up" id="like"></i></button> 
+                  <button class="btn btn-sm hate" id="hate" (click)='addDislike(i)'>{{quote.downVote}} <i class="fa fa-thumbs-down" id="dislike"></i></button> 
+                </div>
+                <app-quote-details [quote]='quote' (isDeleted)='deleteTechQuotes($event,i)'></app-quote-details>
+
+              </div>
             </mdb-card>
             <!-- Card -->
+            
   
         </div>    
         <!-- /.Main -->
@@ -62,22 +63,3 @@
 </header>
   <!--Main Navigation-->
 
-  <!--Main Layout-->
-  <main class="text-center py-5">
-
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-
-          <p align="justify">Simple Quote App</p>
-
-        </div>
-      </div>
-    </div>
-
-  </main>
-  <!--Main Layout-->
-<div class="main">
-
-
-</div>

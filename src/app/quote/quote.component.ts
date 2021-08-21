@@ -11,6 +11,7 @@ export class  QuoteComponent implements OnInit {
     new Quote(1, 'Ken','Zoo', 'I love technology', new Date(2021, 3, 14), 12,3, false),
     new Quote(2, 'Ken','Zoo', 'I love technology', new Date(2021, 5, 14), 12,3, false),
     new Quote(3, 'Ken','Zoo', 'I love technology', new Date(2021, 6, 22), 12,3, false),
+    new Quote(4, 'Ken','Zoo', 'I love technology', new Date(2021, 8, 14), 12,3, false),
   ];
 
   popular:Quote[] = [
