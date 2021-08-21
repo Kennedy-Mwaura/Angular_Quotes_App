@@ -8,7 +8,7 @@ import { QuoteComponent } from './quote/quote.component';
 import { QuoteFormComponent } from './quote-form/quote-form.component';
 import { QuoteDetailsComponent } from './quote-details/quote-details.component';
 import { DateElapsedPipe } from './date-elapsed.pipe';
-import { QuoteModule } from './quote/quote.module';
+
 
 @NgModule({
   declarations: [
@@ -21,7 +21,7 @@ import { QuoteModule } from './quote/quote.module';
   imports: [
     BrowserModule,
     MDBBootstrapModule.forRoot(), 
-    AppRoutingModule, QuoteModule,
+    AppRoutingModule,
     
   ],
   providers: [],
