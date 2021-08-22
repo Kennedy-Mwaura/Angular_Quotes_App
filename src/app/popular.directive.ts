@@ -7,7 +7,8 @@ export class PopularDirective {
 
 
   constructor(private el: ElementRef) { 
-    this.el.nativeElement.style.backgroundColor = '#f5f5f5';
+    this.el.nativeElement.style.backgroundColor = 'whitesmoke';
+    this.el.nativeElement.style.borderRadius = '20px';
   }
 
 }
