@@ -9,18 +9,18 @@ import {ModalDirective} from 'angular-bootstrap-md';
 })
 export class  QuoteComponent implements OnInit {
   techQuotes:Quote[] = [
-    new Quote(1, 'Ken','Zoo', 'I love technology', new Date(2021, 3, 14), 12,3, false),
-    new Quote(2, 'Ken','Zoo', 'I love technology', new Date(2021, 5, 14), 12,3, false),
-    new Quote(3, 'Ken','Zoo', 'I love technology', new Date(2021, 6, 22), 12,3, false),
-    new Quote(4, 'Ken','Zoo', 'I love technology', new Date(2021, 8, 14), 12,3, false),
-    new Quote(5, 'Ken','Zoo', 'I love technology', new Date(2021, 9, 14), 12,3, false),
-    new Quote(6, 'Ken','Zoo', 'I love technology', new Date(2021, 10, 14), 12,3, false),
-    new Quote(7, 'Ken','Zoo', 'I love technology', new Date(2021, 11, 14), 12,3, false),
+    new Quote(1, 'Tim Berners-Lee','Zoo', 'The Web as I envisaged it, we have not seen it yet. The future is still so much bigger than the past.', new Date(2021, 3, 14), 20,3, false),
+    new Quote(2, 'Albert Einstein','Ken', 'It has become appallingly obvious that our technology has exceeded our humanity.', new Date(2021, 5, 14), 17,7, false),
+    new Quote(3, 'Steve Jobs','Sharon', "It's not a faith in technology. It's faith in people", new Date(2021, 6, 22), 12,8, false),
+    new Quote(4, 'Christian Lous Lange','Zoo', 'Technology is a useful servant but a dangerous master', new Date(2021, 8, 14), 15,5, false),
+    new Quote(5, 'Bill Gates','James', "The advance of technology is based on making it fit in so that you don't really even notice it, so it's part of everyday life", new Date(2021, 9, 14), 9,2, false),
+    new Quote(6, 'Matt Mullenweg','Zoo', 'Technology is best when it brings people together', new Date(2021, 10, 14), 7,2, false),
+    new Quote(7, 'Jeff Atwood','Kelvin', 'We have to stop optimizing for programmers and start optimizing for users.', new Date(2021, 11, 14), 19,9, false),
   ];
 
   popular:Quote[] = [
-    new Quote(1, 'Ken', 'Zoo','I love technology', new Date(2021, 3, 14), 12,3, false),
-    new Quote(2, 'Ken', 'Zoo','I love technology', new Date(2021, 5, 14), 12,3, false),
+    new Quote(1, 'Tim Berners-Lee','Zoo', 'The Web as I envisaged it, we have not seen it yet. The future is still so much bigger than the past.', new Date(2021, 3, 14), 30,3, false),
+    new Quote(7, 'Jeff Atwood','Kelvin', 'We have to stop optimizing for programmers and start optimizing for users.', new Date(2021, 11, 14), 19,9, false),
   ];
 
   addNewQuote(quote: any){

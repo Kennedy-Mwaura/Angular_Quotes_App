@@ -1,4 +1,5 @@
 # Angular Quotes App
+
 ![](/src/assets/images/Zoo%20Quotes.gif)
 
 ## Brief Description
