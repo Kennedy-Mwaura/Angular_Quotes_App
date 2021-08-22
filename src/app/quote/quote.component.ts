@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { Quote } from '../quote';
+import {ModalDirective} from 'angular-bootstrap-md';
 
 @Component({
   selector: 'app-quote',
@@ -24,7 +25,7 @@ export class  QuoteComponent implements OnInit {
 
   addNewQuote(quote: any){
     let quoteLength = this.techQuotes.length;
-    let quoteObject = new Quote(quoteLength+1, quote.name,quote.author, quote.quote, new Date(quote.date), quote.likes, quote.dislikes, false);
+    let quoteObject = new Quote(quoteLength+1, quote.userName,quote.quoteAuthor, quote.quote, new Date, quote.upVote, quote.downVote, false);
 
     // quote.id = quoteLength+1;
     this.techQuotes.push(quoteObject);
@@ -92,6 +93,7 @@ export class  QuoteComponent implements OnInit {
     this.techQuotes[index].showQuoteDescription = !this.techQuotes[index].showQuoteDescription;
   }
 
+  @ViewChild('quoteAdd') public quoteAdd!: ModalDirective;
   constructor() { }
 
   ngOnInit(): void {

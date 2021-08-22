@@ -9,6 +9,7 @@ import { QuoteFormComponent } from './quote-form/quote-form.component';
 import { QuoteDetailsComponent } from './quote-details/quote-details.component';
 import { DateElapsedPipe } from './date-elapsed.pipe';
 import { PopularDirective } from './popular.directive';
+import {FormsModule} from '@angular/forms';
 
 
 @NgModule({
@@ -24,6 +25,7 @@ import { PopularDirective } from './popular.directive';
     BrowserModule,
     MDBBootstrapModule.forRoot(), 
     AppRoutingModule,
+    FormsModule,
     
   ],
   providers: [],

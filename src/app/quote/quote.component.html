@@ -13,22 +13,24 @@
             </a>
           </li>
           <li class="nav-item waves-light" mdbWavesEffect>
-            <a class="nav-link">Link</a>
+            <a class="nav-link">About</a>
           </li>
-          <li class="nav-item waves-light" mdbWavesEffect>
-            <a class="nav-link">Profile</a>
-          </li>
+
         </ul>
       </links>
     </mdb-navbar>
 
     <!-- Main -->
     <div class="main-view intro-2 container-fluid"> 
+      <div class="ml-auto add-quote">
+        <app-quote-form  (addTechQuote)='addNewQuote($event)'></app-quote-form>
+      </div>    
+      
         <div class="row ">
             <div class="col-md-9">
                 <div class="card-main d-flex">
                     <!-- Card -->
-                    <mdb-card class="card col-" *ngFor="let quote of techQuotes;let i=index" style="width: 24rem; ">
+                    <mdb-card class="" *ngFor="let quote of techQuotes;let i=index" style="width: 24rem; ">
                       
                       <!--Card content-->
                       <mdb-card-body>
@@ -39,13 +41,15 @@
                   
                         <!--Text-->
                         <mdb-card-text> {{quote.quote}}
+
+
                         </mdb-card-text>
                   
-                        <a href="#" mdbBtn color="primary" gradient="aqua" class="white-text" mdbWavesEffect (click)='showQuoteDetails(i)'>See More</a>
+                        <a href="#" mdbBtn color="primary" gradient="morpheus-den" class="white-text rounded-pill" mdbWavesEffect (click)='showQuoteDetails(i)'>See More</a>
                 
                       </mdb-card-body>
                       <div class="card-text"*ngIf="quote.showQuoteDescription">
-                        <p><i class="far fa-thumbs-up" (click)='addLike(i)' (click)='mostPopularQuote()'></i>  <i style="text-indent: 2em;" (click)='addDislike(i)' class="far fa-thumbs-down    "></i></p>
+  
                         <div class="container-fluid" id="buttons">
                           <button class="btn btn-sm btn-success" (click)='addLike(i)' (click)='mostPopularQuote()'>{{quote.upVote}} <i class="fa fa-thumbs-up" id="like"></i></button> 
                           <button class="btn btn-sm hate" id="hate" (click)='addDislike(i)'>{{quote.downVote}} <i class="fa fa-thumbs-down" id="dislike"></i></button> 
@@ -56,10 +60,41 @@
                     </mdb-card>
                     <!-- Card -->
                   </div>
+                  
                     
             </div>
+            <div class="popularQuote" >
+
+              <h4 class="h1 white-text">Popular Quotes</h4>
+              <div class="card-body popular" *ngFor="let pop of popular;let i=index" appPopular>
+                <mdb-card class="">
+                      
+                  <!--Card content-->
+                  <mdb-card-body>
+                    <!--Title-->
+                    <mdb-card-title>
+                      <h4 class="h2">{{pop.id}}</h4>
+                    </mdb-card-title>
+              
+                    <!--Text-->
+                    <mdb-card-text > <h2 class="h4 indigo-text"> {{pop.quote}} </h2>
+                      <br>
+                      <p class="card-text green-text">{{pop.upVote}} Upvotes</p>
+                      <h6 class="card-title cyan-text"><small class="text">Author ~ </small>{{pop.quoteAuthor}}</h6>
+                      
+                    </mdb-card-text>
+            
+                  </mdb-card-body>
+                  
+                </mdb-card>
+                  
+              </div>
+              
+             </div>
   
         </div>    
+        
+      
         <!-- /.Main -->
 
     </div>

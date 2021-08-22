@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
+import {ModalDirective} from 'angular-bootstrap-md';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Angular-Quotes-App';
+  @ViewChild(ModalDirective) modal!: ModalDirective;
 }
