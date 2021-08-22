@@ -22,8 +22,13 @@
 
     <!-- Main -->
     <div class="main-view intro-2 container-fluid"> 
-      <div class="ml-auto add-quote">
-        <app-quote-form  (addTechQuote)='addNewQuote($event)'></app-quote-form>
+      <div class="ml-auto add-quote d-flex ">
+        <app-quote-form  (addTechQuote)='addNewQuote($event)'></app-quote-form> 
+        <div class="col-md-7 d-flex justify-content-center  align-self-center ">
+          <h3 class="white-text"> Zoo Tech Quotes </h3>
+
+        </div>
+        
       </div>    
       
         <div class="row ">
