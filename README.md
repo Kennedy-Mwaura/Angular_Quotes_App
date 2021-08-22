@@ -22,7 +22,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Deployed Projects
 
-[Link to live site]()
+[Link to live site](https://kennedy-mwaura.github.io/Angular_Quotes_App/)
 
 ## Technologies Used
 
